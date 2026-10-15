@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 4, Task 2: Bootstrap Form Styling.">
+  <title>Task 2 · Bootstrap Form Styling</title>
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-top">
+      <a class="brand" href="index.html">Assignment 4<span>Forms &amp; Validation</span></a>
+      <p class="student-name">Berdibek Meiirbek</p>
+    </div>
+    <nav class="page-width" aria-label="Assignment tasks">
+      <ul class="task-links">
+          <li><a href="index.html">Task 0</a></li>
+          <li><a href="html5-validation.html">Task 1</a></li>
+          <li><a class="active" aria-current="page" href="bootstrap-form.html">Task 2</a></li>
+          <li><a href="bootstrap-validation.html">Task 3</a></li>
+          <li><a href="registration.html">Task 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-width main-content">
+    <header class="page-heading">
+      <p class="part-label">Part 2 · Bootstrap Forms</p>
+      <h1>Task 2. Bootstrap Form Styling</h1>
+      <p>A contact form arranged with the Bootstrap grid.</p>
+    </header>
+    <section class="form-panel" aria-label="Contact form">
+      <form class="row g-3" id="contact-form" action="bootstrap-form.html#contact-form" method="get">
+        <div class="col-md-6">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control" type="text" id="name" name="name" placeholder="Berdibek Meiirbek" autocomplete="name" required minlength="2" maxlength="60" pattern=".*\S.*" aria-describedby="name-help">
+          <div class="form-text" id="name-help">Use 2–60 characters.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required maxlength="254" aria-describedby="email-help">
+          <div class="form-text" id="email-help">Use a valid email address.</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-control" rows="5" id="message" name="message" placeholder="Write your message here…" required minlength="10" maxlength="500" aria-describedby="message-help"></textarea>
+          <div class="form-text" id="message-help">Write 10–500 characters.</div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+    <p class="demo-note">Practice form for Assignment 4.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width">Web Technologies · Berdibek Meiirbek</div>
+  </footer>
+</body>
+</html>
+

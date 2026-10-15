@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 4, Task 1: HTML5 Validation.">
+  <title>Task 1 · HTML5 Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-top">
+      <a class="brand" href="index.html">Assignment 4<span>Forms &amp; Validation</span></a>
+      <p class="student-name">Berdibek Meiirbek</p>
+    </div>
+    <nav class="page-width" aria-label="Assignment tasks">
+      <ul class="task-links">
+          <li><a href="index.html">Task 0</a></li>
+          <li><a class="active" aria-current="page" href="html5-validation.html">Task 1</a></li>
+          <li><a href="bootstrap-form.html">Task 2</a></li>
+          <li><a href="bootstrap-validation.html">Task 3</a></li>
+          <li><a href="registration.html">Task 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-width main-content">
+    <header class="page-heading">
+      <p class="part-label">Part 1 · Basic HTML Forms</p>
+      <h1>Task 1. HTML5 Validation</h1>
+      <p>Complete every field and use a valid email address.</p>
+    </header>
+    <section class="form-panel" aria-label="Contact form">
+      <form class="basic-form" action="html5-validation.html#contact-form" method="get" id="contact-form">
+        <div class="basic-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="60" pattern=".*\S.*" title="Enter at least two characters, including a non-space character.">
+          <p class="field-hint">Use 2–60 characters.</p>
+        </div>
+        <div class="basic-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required maxlength="254">
+        </div>
+        <div class="basic-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500"></textarea>
+          <p class="field-hint">Write 10–500 characters.</p>
+        </div>
+        <button class="basic-button" type="submit">Submit</button>
+      </form>
+    </section>
+    <p class="demo-note">Practice form for Assignment 4.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width">Web Technologies · Berdibek Meiirbek</div>
+  </footer>
+</body>
+</html>
+

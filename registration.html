@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 4, Task 4: Registration Form.">
+  <title>Task 4 · Registration Form</title>
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-top">
+      <a class="brand" href="index.html">Assignment 4<span>Forms &amp; Validation</span></a>
+      <p class="student-name">Berdibek Meiirbek</p>
+    </div>
+    <nav class="page-width" aria-label="Assignment tasks">
+      <ul class="task-links">
+          <li><a href="index.html">Task 0</a></li>
+          <li><a href="html5-validation.html">Task 1</a></li>
+          <li><a href="bootstrap-form.html">Task 2</a></li>
+          <li><a href="bootstrap-validation.html">Task 3</a></li>
+          <li><a class="active" aria-current="page" href="registration.html">Task 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-width main-content">
+    <header class="page-heading">
+      <p class="part-label">Part 3 · Advanced Form Project</p>
+      <h1>Task 4. Registration Form</h1>
+      <p>Register your interest in the Mangystau travel community.</p>
+    </header>
+    <section class="form-panel" aria-label="Registration form">
+      <form class="row g-3 validation-form" id="registration-form" method="post" novalidate>
+        <div class="col-md-6">
+          <label class="form-label" for="first-name">First Name</label>
+          <input class="form-control" type="text" id="first-name" name="first-name" autocomplete="given-name" required minlength="2" maxlength="60" pattern=".*\S.*" aria-describedby="first-name-help first-name-error first-name-valid" data-error="Enter your first name using 2–60 characters.">
+          <div class="form-text" id="first-name-help">Use 2–60 characters.</div>
+          <div class="invalid-feedback" id="first-name-error">Enter your first name using 2–60 characters.</div>
+          <div class="valid-feedback" id="first-name-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="last-name">Last Name</label>
+          <input class="form-control" type="text" id="last-name" name="last-name" autocomplete="family-name" required minlength="2" maxlength="60" pattern=".*\S.*" aria-describedby="last-name-help last-name-error last-name-valid" data-error="Enter your last name using 2–60 characters.">
+          <div class="form-text" id="last-name-help">Use 2–60 characters.</div>
+          <div class="invalid-feedback" id="last-name-error">Enter your last name using 2–60 characters.</div>
+          <div class="valid-feedback" id="last-name-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" autocomplete="email" required maxlength="254" aria-describedby="email-help email-error email-valid" data-error="Enter a valid email address.">
+          <div class="form-text" id="email-help">For example, name@example.com.</div>
+          <div class="invalid-feedback" id="email-error">Enter a valid email address.</div>
+          <div class="valid-feedback" id="email-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="country">Country</label>
+          <select class="form-select" id="country" name="country" autocomplete="country-name" required aria-describedby="country-error country-valid" data-error="Choose a country.">
+            <option value="" selected disabled>Choose a country</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Türkiye">Türkiye</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="invalid-feedback" id="country-error">Choose a country.</div>
+          <div class="valid-feedback" id="country-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control" type="password" id="password" name="password" autocomplete="new-password" required minlength="8" maxlength="64" aria-describedby="password-help password-error password-valid" data-error="Use a password with 8–64 characters.">
+          <div class="form-text" id="password-help">Use 8–64 characters.</div>
+          <div class="invalid-feedback" id="password-error">Use a password with 8–64 characters.</div>
+          <div class="valid-feedback" id="password-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="confirm-password">Confirm Password</label>
+          <input class="form-control" type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" required minlength="8" maxlength="64" aria-describedby="confirm-password-help confirm-password-error confirm-password-valid" data-error="Passwords must match.">
+          <div class="form-text" id="confirm-password-help">Enter the same password again.</div>
+          <div class="invalid-feedback" id="confirm-password-error">Passwords must match.</div>
+          <div class="valid-feedback" id="confirm-password-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <fieldset class="option-group" id="gender-group" aria-describedby="gender-error gender-valid">
+            <legend>Gender</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="gender-male" name="gender" value="Male" required aria-describedby="gender-error gender-valid">
+              <label class="form-check-label" for="gender-male">Male</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="gender-female" name="gender" value="Female" required aria-describedby="gender-error gender-valid">
+              <label class="form-check-label" for="gender-female">Female</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="gender-unspecified" name="gender" value="Prefer not to say" required aria-describedby="gender-error gender-valid">
+              <label class="form-check-label" for="gender-unspecified">Prefer not to say</label>
+            </div>
+          </fieldset>
+          <div class="invalid-feedback" id="gender-error">Choose a gender option.</div>
+          <div class="valid-feedback" id="gender-valid">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <fieldset class="option-group">
+            <legend>Hobbies <span class="optional-label">(optional)</span></legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="hobby-photography" name="hobbies" value="Photography">
+              <label class="form-check-label" for="hobby-photography">Photography</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="hobby-travel" name="hobbies" value="Travel">
+              <label class="form-check-label" for="hobby-travel">Travel</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="hobby-sports" name="hobbies" value="Sports">
+              <label class="form-check-label" for="hobby-sports">Sports</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-12 d-flex flex-wrap gap-2 mt-4">
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-outline-secondary" type="reset">Reset</button>
+        </div>
+      </form>
+      <p class="status-message mt-4" id="form-status" role="status" hidden>All fields are valid. Registration form completed.</p>
+    </section>
+    <p class="demo-note">Practice form for Assignment 4.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width">Web Technologies · Berdibek Meiirbek</div>
+  </footer>
+</body>
+</html>
+
