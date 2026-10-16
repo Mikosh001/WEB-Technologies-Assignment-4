@@ -17,11 +17,7 @@
 
 Every page has a navbar linking to all five tasks. Bootstrap 5.3.8 CSS is stored locally; no CDN or build step is required. JavaScript is used only on Tasks 3 and 4 for validation and password matching.
 
-## Run
 
-Open `index.html` in a browser and use the navbar.
-
-These are practice forms. Tasks 0–2 use native GET submission to the same static page. Tasks 3–4 prevent submission, check the inputs and show a completion message locally. There is no contact delivery, account creation, database or password storage.
 
 ## Check the forms
 
@@ -41,5 +37,4 @@ These are practice forms. Tasks 0–2 use native GET submission to the same stat
 - `assets/bootstrap/bootstrap.min.css` — Bootstrap 5.3.8.
 - `assets/bootstrap/LICENSE.txt` — Bootstrap's MIT license.
 
-Resources: [Bootstrap forms](https://getbootstrap.com/docs/5.3/forms/overview/), [Bootstrap validation](https://getbootstrap.com/docs/5.3/forms/validation/), [MDN constraint validation](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation).
 
